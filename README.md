@@ -1,2 +1,2 @@
 # Homebrew-EchoVault
-Homebrew tap for all echovault apps that are distributed to homebrew
+Homebrew tap for all EchoVault apps that are distributed to homebrew

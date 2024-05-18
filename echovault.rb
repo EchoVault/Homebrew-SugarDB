@@ -5,11 +5,11 @@
 class Echovault < Formula
   desc ""
   homepage "https://github.com/EchoVault/EchoVault"
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
-    url "https://github.com/EchoVault/EchoVault/releases/download/v0.5.0/EchoVault_Darwin_all.tar.gz"
-    sha256 "8935d2c72866ec1a04460fd79772e9a2bd8478c58709ab848e516a1d24bec40f"
+    url "https://github.com/EchoVault/EchoVault/releases/download/v0.6.0/EchoVault_Darwin_all.tar.gz"
+    sha256 "74234a2eea516f4c117a125383968febda1c3f4e8b2a0e184e76412748b40821"
 
     def install
       bin.install "EchoVault"
@@ -17,20 +17,24 @@ class Echovault < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/EchoVault/EchoVault/releases/download/v0.5.0/EchoVault_Linux_x86_64.tar.gz"
-      sha256 "b3468dd484abbe51828f6797f3081753f2db6b894ecd2fc30c084bed22580034"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/EchoVault/EchoVault/releases/download/v0.6.0/EchoVault_Linux_x86_64.tar.gz"
+        sha256 "5e4d62490ce778dca4594f6138d663f7b10f7aa6abe9c87e2c95b2c6333e60ec"
 
-      def install
-        bin.install "EchoVault"
+        def install
+          bin.install "EchoVault"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/EchoVault/EchoVault/releases/download/v0.5.0/EchoVault_Linux_arm64.tar.gz"
-      sha256 "b2ed80f7b6eab352d5e96cf1dab83d2fa186eac753e8c2b6d5dbc58e80dab220"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/EchoVault/EchoVault/releases/download/v0.6.0/EchoVault_Linux_arm64.tar.gz"
+        sha256 "9b8a1d44daddbf4be93c138c487e8878c9c3a1914292ae8e7315d8f406798320"
 
-      def install
-        bin.install "EchoVault"
+        def install
+          bin.install "EchoVault"
+        end
       end
     end
   end

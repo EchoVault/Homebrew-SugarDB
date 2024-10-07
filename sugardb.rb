@@ -5,11 +5,11 @@
 class Sugardb < Formula
   desc ""
   homepage "https://github.com/EchoVault/SugarDB"
-  version "0.13.1"
+  version "0.14.0"
 
   on_macos do
-    url "https://github.com/EchoVault/SugarDB/releases/download/v0.13.1/SugarDB_Darwin_all.tar.gz"
-    sha256 "87f3e5560daeb25e55fd819cf61ac78adcac7270e5c78aaab3146e7ea11c7eb7"
+    url "https://github.com/EchoVault/SugarDB/releases/download/v0.14.0/SugarDB_Darwin_all.tar.gz"
+    sha256 "a05617702691b7288e24831324c3ba6d0a0139859030fbb862efd2c23581822f"
 
     def install
       bin.install "SugarDB"
@@ -19,8 +19,8 @@ class Sugardb < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/EchoVault/SugarDB/releases/download/v0.13.1/SugarDB_Linux_x86_64.tar.gz"
-        sha256 "da40bd6c21fcb8f732fef14ca44872a5cac7ce6f67b443e60c54511e96344e11"
+        url "https://github.com/EchoVault/SugarDB/releases/download/v0.14.0/SugarDB_Linux_x86_64.tar.gz"
+        sha256 "3007a22b3b591035fa3e30c1ddd5cba1bf5f8791d6c624c949d3ce0bbc333dba"
 
         def install
           bin.install "SugarDB"
@@ -29,8 +29,8 @@ class Sugardb < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/EchoVault/SugarDB/releases/download/v0.13.1/SugarDB_Linux_arm64.tar.gz"
-        sha256 "46061d9631d1d659ae6a23ea0276f843cf1a78127c5acf78a65ccf7a3579844e"
+        url "https://github.com/EchoVault/SugarDB/releases/download/v0.14.0/SugarDB_Linux_arm64.tar.gz"
+        sha256 "7bc14cbee49140e0e7da8ad276558349c8a25760ac2a435d1443fab9c2bbaf21"
 
         def install
           bin.install "SugarDB"
